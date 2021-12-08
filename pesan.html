@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>Form Pesan Tiket</title>
+    <link rel="stylesheet" type="text/css" href="pesan.css">
+    <script>var pesan = () => alert("Anda telah berhasil memesan tiket! Tiket akan dikirimkan ke E-mail anda!");
+    </script>
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#date_ex").datepicker();
+        });
+    </script>
+
+</head>
+
+<body>
+    <form method="POST" action="tiket.html">
+        <h4>FORM PEMESANAN TIKET JAWA TIMUR PARK 2</h4>
+        <input type="text" name="var1" SIZE="40" placeholder="Silahkan masukkan Nama anda">
+        <BR></BR>
+        <input type="text" name="var1" SIZE="40" placeholder="Silahkan masukkan Email anda">
+        <BR></BR>
+        <B>Apakah anda seorang pelajar?</B>
+        <input type="checkbox" name="var3">
+        <BR></BR>
+        <b>Paket apa yang ingin anda pesan?</b><br>
+        <br>
+        <select name="var6" size="1">
+            <option value="PR" selected>Paket Reguler</option>
+            <option value="PT">Paket Terusan</option>
+            <option value="PS">Paket Sakti</option>
+            <option value="PSS">Paket Super Sakti</option>
+            <option value="PH">Paket Hemat</option>
+        </select>
+        <br><br>
+        <b>Masukkan jumlah tiket!</b>
+        <input type="text">
+        <br><br>
+        <b>Masukkan tanggal Tiket</b><br>
+        <br>
+        <div> <b>Silahkan pilih Tanggal:  </b><input type="text" id="date_ex"></div><br><br>
+        <b>Keterangan tambahan</b><br>
+        <textarea name="var7" id="" cols="50" rows="5" placeholder="Masukkan keterangan tambahan lainnya"></textarea>
+        <br>
+        <input type="submit" name="var5" value="Pesan" href="#" onclick="pesan()">
+        <input type="reset" name="var5" value="Clear">
+    </form>
+</body>
+
+</html>

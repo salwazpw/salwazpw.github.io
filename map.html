@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MAP</title>
+    <link rel="stylesheet" type="text/css" href="map.css">
+</head>
+
+<body>
+    <nav id="menu">
+        <ul>
+            <div id="heading">
+                <a href="https://www.jtp.id/">JTP GROUP</a></li>
+            </div>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Utility</a>
+                <ul>
+                    <li><a href="fasilitas.html">Fasility</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                </ul>
+            </li>
+            <li><a href="tiket.html">Ticket</a></li>
+            <li><a href="#">Location</a>
+                <ul>
+                    <li> <a href="address.html">Address</a></li>
+                    <li> <a href="map.html">MAP</a></li>
+                </ul>
+            </li>
+            <li><a href="sosmed.html">About</a>
+            </li>
+            </li>
+    </nav>
+    <div id="map" style="width: 100%;height: 500px;"></div>
+    <script>
+        function initMap() {
+            var batu = { lat: -7.88851706276296, lng: 112.52949070894341 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 9,
+                center: batu
+            });
+            var contentString = '<img src = jp2.jpg width = 80>';
+            var infoWindow = new google.maps.InfoWindow({
+                content: contentString,
+                position: new google.maps.LatLng(-7.80000000000000, 112.52949070894341),
+            });
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(-7.88851706276296, 112.52949070894341),
+                map: map
+            })
+            infoWindow.open(map);
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArXLmI-2r9RmTSxp4UNHFK3Zo4z8TvJwo&callback=initMap"></script>
+    <footer>
+        <div class ="footer">Jawa Timur Park Group, Indonesia</div>
+    </footer>
+</body>
+
+</html>
